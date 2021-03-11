@@ -30,5 +30,6 @@ public class StudentReader extends AplicantReader {
 		}
 		input.close();
 		return studenti;
+		
 	}
 }

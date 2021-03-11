@@ -29,8 +29,7 @@ public abstract class AplicantReader {
 		aplicant.setVarsta(varsta);
 		aplicant.setPunctaj(punctaj);
 		aplicant.setDenumiriProiecte(nr,vect);
-		
-		
+				
 	}
 
 }

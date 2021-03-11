@@ -28,6 +28,7 @@ public class AngajatReader extends AplicantReader {
 			angajati.add(angajat);
 		}
 		input2.close();
-		return angajati;
+		return angajati; 
+		
 	}
 }
