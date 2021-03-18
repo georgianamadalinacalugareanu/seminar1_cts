@@ -2,6 +2,7 @@ package main;
 
 import clase.DepartamentFinanciar;
 import clase.DepartamentFinanciarEager;
+import clase.Geaca;
 
 public class Main {
 	public static void main(String[] args) {
@@ -19,6 +20,14 @@ public class Main {
 	    
         System.out.println(dpt1.toString());
         System.out.println(dpt2.toString());
+        
+        Geaca geaca1=Geaca.getInstance("albastra", 32, 45);
+        Geaca geaca2=Geaca.getInstance("rosie", 36, 20);
+        
+        System.out.println(geaca1.toString());
+        System.out.println(geaca2.toString());
+        
+        
 	}
 
 }
