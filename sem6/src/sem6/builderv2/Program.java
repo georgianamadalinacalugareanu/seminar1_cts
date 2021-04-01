@@ -6,7 +6,7 @@ public class Program {
 		// TODO Auto-generated method stub
 		RezervareBuilder builder = new RezervareBuilder().setCodRezervare(1).setAreBauturaRacoritoare(true);
 		Rezervare rezervare = builder.build();
-		builder.setCodRezervare(2).setAreManareInclusa(true);
+		builder.setCodRezervare(2).setAreMancareInclusa(true);
 		Rezervare rezervare2= builder.build();
 		System.out.println(rezervare.toString());
 		System.out.println(rezervare2.toString());

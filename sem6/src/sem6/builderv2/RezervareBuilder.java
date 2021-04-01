@@ -3,7 +3,7 @@ package sem6.builderv2;
 
 public class RezervareBuilder implements AbstractBuilder {
 	private int codRezervare;
-	private boolean areManareInclusa;
+	private boolean areMancareInclusa;
 	private boolean areScaunErgonomic;
 	private boolean areBauturaRacoritoare;
 	private boolean areMuzicaAmbientalaPersonalizate;
@@ -13,8 +13,8 @@ public class RezervareBuilder implements AbstractBuilder {
 		this.codRezervare = codRezervare;
 		return this;
 	}
-	public RezervareBuilder setAreManareInclusa(boolean areManareInclusa) {
-		this.areManareInclusa = areManareInclusa;
+	public RezervareBuilder setAreMancareInclusa(boolean areMancareInclusa) {
+		this.areMancareInclusa = areMancareInclusa;
 		return this;
 	}
 	public RezervareBuilder setAreScaunErgonomic(boolean areScaunErgonomic) {
@@ -35,7 +35,7 @@ public class RezervareBuilder implements AbstractBuilder {
 	}
 	@Override
 	public Rezervare build() {
-	    Rezervare rezervare = new Rezervare(codRezervare, areManareInclusa, areScaunErgonomic, areBauturaRacoritoare, areMuzicaAmbientalaPersonalizate, genMuzica);
+	    Rezervare rezervare = new Rezervare(codRezervare, areMancareInclusa, areScaunErgonomic, areBauturaRacoritoare, areMuzicaAmbientalaPersonalizate, genMuzica);
 		return rezervare;
 	}
 
