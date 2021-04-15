@@ -1,4 +1,7 @@
-package composite;
+package composite.program;
+
+import composite.clase.Item;
+import composite.clase.Sectiune;
 
 public class Main {
 

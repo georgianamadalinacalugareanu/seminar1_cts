@@ -1,4 +1,4 @@
-package composite;
+package composite.clase;
 
 public interface ComponentaAbstracta {
 
