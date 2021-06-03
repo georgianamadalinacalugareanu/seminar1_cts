@@ -4,7 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import sem13.categorii.TesteGetPromovabilitate;
+import sem13.categorii.TesteNormale;
+import sem13.categorii.TesteUrgente;
 import sem13.clase.Grupa;
 import sem13.clase.Student;
 
@@ -26,6 +30,7 @@ public class GrupaTeste {
 	}
 	
 	@Test
+	@Category({TesteGetPromovabilitate.class, TesteUrgente.class})
 	public void testGetPromovabilitateRight() {
 		Student studentMarcel=new Student("Marcel");
 		studentMarcel.adaugaNota(10);
@@ -40,11 +45,14 @@ public class GrupaTeste {
 	}
 	
 	@Test
+	@Category({TesteGetPromovabilitate.class,TesteNormale.class})
+	
 	public void testGetPromovabilitateLowerBoundary() {
 		assertEquals(0, grupa.getPromovabilitate(),0.1);
 	}
 	
 	@Test
+	@Category(TesteGetPromovabilitate.class)
 	public void testGetPromovabilitateUpperBoundary() {
 		Grupa grupaNoua=new Grupa(1076);
 		Student student1=new Student("Ion");
@@ -59,6 +67,7 @@ public class GrupaTeste {
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
+	@Category(TesteGetPromovabilitate.class)
 	public void testGetPromovabilitateError() {
 		Grupa grupaNoua=new Grupa(1080);
 		grupaNoua.getPromovabilitate();
@@ -66,6 +75,7 @@ public class GrupaTeste {
 	}
 
 	@Test
+	@Category(TesteUrgente.class)
 	public void testConstructorRight(){
 		Grupa grupa=new Grupa(1077);
 		assertEquals(1077, grupa.getNrGrupa());
@@ -101,12 +111,14 @@ public class GrupaTeste {
 	}
 	
 	@Test
+	@Category(TesteNormale.class)
 	public void testConstructorExistence() {
 		Grupa grupa=new Grupa(1077);
 		assertNotNull(grupa.getStudenti());
 	}
 	
 	@Test(timeout=500)
+	@Category(TesteGetPromovabilitate.class)
 	public void testGetPromovabilitatePerformance() {
 		grupa.getPromovabilitate();
 	}
